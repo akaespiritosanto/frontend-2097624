@@ -1,0 +1,9 @@
+npm create vite@latest
+
+
+SOLUÇÃO:
+set-executionPolicy (espaço)
+unrestricted
+"A"
+
+npm run dev
