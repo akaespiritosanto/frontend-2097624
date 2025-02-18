@@ -1,0 +1,3 @@
+
+var - funciona dentro de qualquer escopo
+let - funciona só naquele escopo
