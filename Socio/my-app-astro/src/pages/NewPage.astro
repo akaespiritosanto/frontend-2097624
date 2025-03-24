@@ -1,0 +1,24 @@
+---
+import Layout from '../components/Layout.astro';
+---
+
+<Layout>
+  <h1>New Page</h1>
+  <input 
+    type="text" 
+    id="inputField" 
+    placeholder="Type something..."
+  />
+  <p>You typed: <span id="outputValue"></span></p>
+</Layout>
+
+<script>
+  // Seleciona os elementos do DOM
+  const inputField = document.getElementById('inputField');
+  const outputValue = document.getElementById('outputValue');
+
+  // Atualiza o valor exibido quando o input muda
+  inputField.addEventListener('input', (event) => {
+    outputValue.textContent = event.target.value;
+  });
+</script>
