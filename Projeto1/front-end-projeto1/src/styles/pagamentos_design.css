@@ -1,0 +1,562 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(67, 51, 206, 0.123);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 2px solid rgba(36, 36, 36, 0.308);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #fff;
+}
+
+button {
+    background-color: rgb(88, 72, 226);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: rgb(75, 61, 197);
+}
+
+.payments h1, .payments h2,
+.payment-list-container h1, .payment-list-container h2,
+.payment-method-container h1, .payment-method-container h2,
+.payment-history-container h1, .payment-history-container h2,
+.payment-summary-container h1, .payment-summary-container h2 {
+    color: #333;
+}
+
+.payments p, .payments ul,
+.payment-list-container p, .payment-list-container ul,
+.payment-method-container p, .payment-method-container ul,
+.payment-history-container p, .payment-history-container ul,
+.payment-summary-container p, .payment-summary-container ul {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.payments ul,
+.payment-list-container ul,
+.payment-method-container ul,
+.payment-history-container ul,
+.payment-summary-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.payment-list-container,
+.payment-method-container,
+.payment-history-container,
+.payment-summary-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.payment-summary-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 20px;
+}
+
+.payment-summary-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.summary-value {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.summary-item.selected .summary-value {
+    color: rgb(88, 72, 226);
+    font-weight: bold;
+}
+
+.payment-summary-actions {
+    margin-top: 10px;
+}
+
+.btn-pay-selected {
+    background-color: #28a745;
+}
+
+.btn-pay-selected:hover {
+    background-color: #218838;
+}
+
+.payment-installment-plan-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.payment-installment-plan-description {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.payment-installment-plan-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.plan-item {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 15px;
+    transition: all 0.2s ease;
+}
+
+.plan-item:hover {
+    border-color: #aaa;
+    transform: translateY(-2px);
+}
+
+.plan-item.selected {
+    background-color: #e6f7ff;
+    border-color: #1890ff;
+}
+
+.plan-description {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 8px 0;
+}
+
+.plan-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.plan-installments {
+    color: #333;
+    font-weight: bold;
+}
+
+.plan-discount {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.payment-discount-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.payment-discount-description {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.payment-discount-details {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+.discount-payment-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.discount-payment-label {
+    color: #666;
+    font-weight: bold;
+}
+
+.discount-payment-info.highlight .discount-payment-value {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.discount-payment-info.total {
+    border-top: 1px solid #ddd;
+    margin-top: 8px;
+    padding-top: 8px;
+}
+
+.discount-payment-info.total .discount-payment-value {
+    color: #1890ff;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.payment-discount-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.discount-item {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 15px;
+    transition: all 0.2s ease;
+}
+
+.discount-item:hover {
+    border-color: #aaa;
+    transform: translateY(-2px);
+}
+
+.discount-item.selected {
+    background-color: #e6f7ff;
+    border-color: #1890ff;
+}
+
+.discount-description {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 8px 0;
+}
+
+.discount-rate {
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.payment-discount-actions {
+    margin-top: 15px;
+    text-align: right;
+}
+
+.btn-apply-discount {
+    background-color: #1890ff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: background-color 0.2s;
+}
+
+.btn-apply-discount:hover {
+    background-color: #096dd9;
+}
+
+.payment-receipt-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.payment-receipt-header {
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.receipt-number {
+    color: #666;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.payment-receipt-content {
+    margin-bottom: 20px;
+}
+
+.receipt-section {
+    margin-bottom: 20px;
+}
+
+.receipt-section h3 {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.receipt-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.receipt-label {
+    color: #666;
+    font-weight: bold;
+}
+
+.receipt-info.total {
+    border-top: 1px solid #eee;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.payment-receipt-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.btn-print-receipt, .btn-download-receipt {
+    background-color: #1890ff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: background-color 0.2s;
+}
+
+.btn-print-receipt:hover, .btn-download-receipt:hover {
+    background-color: #096dd9;
+}
+
+.btn-download-receipt {
+    background-color: #52c41a;
+}
+
+.btn-download-receipt:hover {
+    background-color: #389e0d;
+}
+
+.receipt-custom-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.btn-close-receipt {
+    background-color: transparent;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.btn-close-receipt:hover {
+    color: #333;
+}
+
+.receipt-footer {
+    border-top: 1px solid #eee;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.installment-plan-header,
+.installment-plan-footer {
+    color: #666;
+    margin: 10px 0;
+}
+
+.installment-plan-header h3 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.payment-reminder-content-custom {
+    padding: 10px 0;
+}
+
+.reminder-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.reminder-detail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-label {
+    color: #666;
+    font-weight: bold;
+}
+
+.detail-value.urgency {
+    color: #f5222d;
+    font-weight: bold;
+}
+
+.payment-list-header,
+.payment-list-footer,
+.payment-method-header,
+.payment-method-footer,
+.payment-history-header,
+.payment-history-footer {
+    margin: 15px 0;
+}
+
+.payment-list-empty,
+.payment-history-empty {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.payment-paid {
+    background-color: #e8f5e9;
+}
+
+.payment-method-container {
+    margin-top: 30px;
+}
+
+.payment-processing {
+    font-weight: bold;
+    color: #555;
+}
+
+.payment-filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+}
+
+.filter-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.filter-group select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.payment-tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.payment-tab {
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px 4px 0 0;
+    margin-right: 5px;
+}
+
+.payment-tab.active {
+    background-color: rgb(88, 72, 226);
+    color: white;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 4px;
+    border-left: 5px solid #28a745;
+    font-weight: bold;
+}

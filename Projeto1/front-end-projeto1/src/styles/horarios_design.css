@@ -1,0 +1,414 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(67, 51, 206, 0.123);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-submit,
+.btn-save,
+.btn-cancel,
+.btn-add-event {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.btn-submit,
+.btn-save {
+    background-color: #3b4cca;
+    color: white;
+    margin-left: 10px;
+}
+
+.btn-cancel {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.btn-add-event {
+    background-color: #4caf50;
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+.schedule,
+.summaries {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.schedule h1,
+.summaries h1 {
+    font-size: 1.7rem;
+    color: #3b4cca;
+    margin-bottom: 10px;
+}
+
+.schedule table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.schedule table th,
+.schedule table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.schedule table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.summaries .summary {
+    margin-bottom: 20px;
+}
+
+.summaries .summary h2 {
+    font-size: 1.3rem;
+    color: #2b2b2b;
+    margin-bottom: 5px;
+}
+
+.summaries .summary p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.schedule-view {
+    width: 100%;
+}
+
+.schedule-filter-container {
+    margin-bottom: 20px;
+}
+
+.schedule-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 992px) {
+    .schedule-content {
+        flex-direction: row;
+    }
+
+    .schedule-table-section {
+        flex: 3;
+    }
+
+    .schedule-summary-section {
+        flex: 2;
+    }
+}
+
+.schedule-editor-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.schedule-editor-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.schedule-calendar {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+    font-size: 1.5rem;
+    color: #3b4cca;
+    margin: 0;
+}
+
+.calendar-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.date-picker {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.event-card {
+    background-color: #f9f9f9;
+    border-left: 4px solid #3b4cca;
+    padding: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.event-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-time {
+    font-weight: bold;
+    color: #3b4cca;
+}
+
+.event-title {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+.event-subject {
+    color: #666;
+    font-style: italic;
+}
+
+.event-description {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.no-events {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+}
+
+.schedule-notifications {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: max-height 0.3s;
+}
+
+.notifications-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+.notifications-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #3b4cca;
+}
+
+.unread-badge {
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.notifications-content {
+    padding: 0 20px 20px;
+}
+
+.notifications-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.mark-all-read {
+    background: none;
+    border: none;
+    color: #3b4cca;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
+
+.mark-all-read:disabled {
+    color: #999;
+    cursor: default;
+    text-decoration: none;
+}
+
+.notifications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notification-item {
+    display: flex;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.notification-item.unread {
+    background-color: #e6f7ff;
+    border-left: 3px solid #3b4cca;
+}
+
+.notification-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.notification-message {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.notification-date {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 5px;
+}
+
+.mark-read-button {
+    background-color: #3b4cca;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.no-notifications {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+}

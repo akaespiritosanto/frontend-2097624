@@ -1,0 +1,309 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(67, 51, 206, 0.123);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+.search-disciplines,
+.search-evaluations,
+.list-of-grades,
+.students-associated {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.search-disciplines h1,
+.search-evaluations h1,
+.list-of-grades h1,
+.students-associated h1 {
+    font-size: 1.5rem;
+    color: #3b4cca;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group button.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(88, 72, 226);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button.btn:hover {
+    background-color: rgb(75, 61, 197);
+}
+
+.no-results {
+    color: #888;
+    font-style: italic;
+}
+
+.search-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.search-form h1 {
+    font-size: 1.5rem;
+    color: #3b4cca;
+    margin-bottom: 10px;
+}
+
+.grades-table,
+.students-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.grades-table table,
+.students-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.grades-table th,
+.students-table th {
+    background-color: #f2f2f2;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+}
+
+.grades-table td,
+.students-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.grades-table tr:hover,
+.students-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.btn-view {
+    padding: 6px 12px;
+    background-color: rgb(88, 72, 226);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-view:hover {
+    background-color: rgb(75, 61, 197);
+}
+
+.grades-info,
+.grades-empty,
+.students-stats {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    border-left: 4px solid #3b4cca;
+}
+
+.grades-info p,
+.grades-empty p {
+    margin: 5px 0;
+}
+
+.students-stats ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.students-stats li {
+    margin-bottom: 5px;
+}
+
+.grades-header-slot,
+.grades-footer-slot,
+.students-header-slot,
+.students-footer-slot {
+    margin: 15px 0;
+}
+
+.grade-details-section {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.grade-details-section h1 {
+    font-size: 1.5rem;
+    color: #3b4cca;
+    margin-bottom: 20px;
+}
+
+.grade-details {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.grade-details-header,
+.grade-details-header-slot {
+    background-color: #3b4cca;
+    color: white;
+    padding: 15px;
+}
+
+.grade-details-header h2,
+.grade-details-custom-header h2 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.grade-details-custom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grade-year {
+    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.grade-details-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grade-details-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.grade-details-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.grade-details-info p {
+    margin: 8px 0;
+}
+
+.grade-additional-info {
+    flex: 1;
+    min-width: 250px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.grade-additional-info h3 {
+    margin-top: 0;
+    color: #3b4cca;
+    font-size: 1.1rem;
+}
+
+.grade-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-action {
+    padding: 8px 16px;
+    background-color: #3b4cca;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-action:hover {
+    background-color: #2a3a99;
+}
+
+.grade-footer-info {
+    background-color: #f5f5f5;
+    padding: 10px 15px;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: #666;
+}

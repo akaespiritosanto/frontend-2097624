@@ -1,0 +1,37 @@
+.navigation {
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-tabs {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #555;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: #e8e8e8;
+  color: #333;
+}
+
+.nav-item.active {
+  border-bottom: 3px solid #005b96;
+  color: #005b96;
+  background-color: #e8e8e8;
+}

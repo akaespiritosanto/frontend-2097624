@@ -1,0 +1,242 @@
+.background2 {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: black;
+    overflow: hidden;
+}
+
+#background-image2 {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    opacity: 45%;
+    filter: blur(8px);
+}
+
+.box-login2 {
+    position: absolute;
+    right: 630px;
+    top: 80px;
+    width: 700px;
+    height: 780px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(80, 65, 209);
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#nome {
+    margin-top: 10px;
+    width: 400px;
+    height: 35px;
+    border: solid;
+    border-color: rgb(142, 133, 214);
+    border-radius: 8px;
+    margin-bottom: 23px;
+    background-color: rgb(142, 133, 214);
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.787);
+}
+
+#nome::placeholder {
+    padding-left: 18px;
+    color: rgb(231, 231, 231);
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#nome:focus {
+    outline: none;
+    font-family: Arial;
+    color: rgba(0, 0, 0, 0.787);
+    font-weight: bold;
+}
+
+#password2 {
+    width: 400px;
+    height: 35px;
+    border: solid;
+    border-color: rgb(142, 133, 214);
+    border-radius: 8px;
+    background-color: rgb(142, 133, 214);
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.787);
+    margin-bottom: 23px;
+}
+
+#password2::placeholder {
+    padding-left: 18px;
+    color: rgb(231, 231, 231);
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#password2:focus {
+    outline: none;
+    font-family: Arial;
+    color: rgba(0, 0, 0, 0.787);
+    font-weight: bold;
+}
+
+#email {
+    margin-top: 10px;
+    width: 400px;
+    height: 35px;
+    border: solid;
+    border-color: rgb(142, 133, 214);
+    border-radius: 8px;
+    margin-bottom: 2px;
+    background-color: rgb(142, 133, 214);
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.787);
+}
+
+#email::placeholder {
+    padding-left: 18px;
+    color: rgb(231, 231, 231);
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#email:focus {
+    outline: none;
+    font-family: Arial;
+    color: rgba(0, 0, 0, 0.787);
+    font-weight: bold;
+}
+
+#registrar {
+    position: absolute;
+    left: 180px;
+    top: 550px;
+    color: white;
+    margin-top: 50px;
+    width: 340px;
+    height: 45px;
+    border: solid;
+    border-color: white;
+    border-radius: 15px;
+    background-color: rgb(80, 65, 209);
+    font-weight: bold;
+    font-family: Arial;
+    align-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+#registrar:hover {
+    color: black;
+    border: solid;
+    border-color: white;
+    background-color: white;
+}
+
+#tem-conta {
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+#logo3 {
+    position: absolute;
+    right: 120px;
+    top: 40px;
+    border: none;
+    border-radius: 300px;
+}
+
+.input-error {
+    color: #ff3333;
+    font-size: 12px;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.terms-container {
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.terms-label {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.terms-label input {
+    margin-right: 10px;
+}
+
+.terms-text {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: Arial;
+    background-color: rgba(142, 133, 214, 0.3);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.validation-message {
+    width: 400px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-family: Arial;
+    font-size: 14px;
+}
+
+.validation-message.error {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: #ff3333;
+    border: 1px solid #ff3333;
+}
+
+.validation-message.success {
+    background-color: rgba(0, 255, 0, 0.2);
+    color: #00cc00;
+    border: 1px solid #00cc00;
+}
+
+.form-header, .form-footer {
+    width: 400px;
+    text-align: center;
+    color: white;
+    font-family: Arial;
+    margin-bottom: 20px;
+}
+
+.form-header h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.form-footer p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#registrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

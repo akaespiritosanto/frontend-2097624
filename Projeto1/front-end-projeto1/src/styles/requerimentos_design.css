@@ -1,0 +1,295 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(67, 51, 206, 0.123);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+.requests,
+.search-form-container,
+.request-list-container,
+.request-form-container,
+.request-details-container,
+.request-stats-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.requests h1,
+.search-form-container h1,
+.request-list-container h1,
+.request-form-container h1,
+.request-details-container h1,
+.request-stats-container h1 {
+    font-size: 1.5rem;
+    color: #3b4cca;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group select,
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group button.btn,
+.btn,
+.btn-action {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(88, 72, 226);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button.btn:hover,
+.btn:hover,
+.btn-action:hover {
+    background-color: rgb(75, 61, 197);
+}
+
+.btn-action {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+}
+
+.btn-cancel {
+    background-color: #6c757d;
+    margin-left: 10px;
+}
+
+.btn-cancel:hover {
+    background-color: #5a6268;
+}
+
+.btn-remove {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 5px;
+    margin-left: 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.btn-remove:hover {
+    background-color: #c82333;
+}
+
+.alert {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.alert a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.alert a:hover {
+    text-decoration: underline;
+}
+
+.requests table,
+.request-list-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.requests table th,
+.requests table td,
+.request-list-container table th,
+.request-list-container table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.requests table th,
+.request-list-container table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.request-list-container tbody tr {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.request-list-container tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.request-list-empty {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+
+.request-list-header,
+.request-list-footer,
+.request-form-header,
+.request-form-footer {
+    margin: 15px 0;
+}
+
+.form-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.attachments-list {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.attachments-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.attachments-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.attachments-list li:last-child {
+    border-bottom: none;
+}
+
+.request-details {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.request-details p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.request-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.request-actions button {
+    margin-left: 10px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.stat-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3b4cca;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 0.9rem;
+}
